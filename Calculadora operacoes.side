@@ -1,0 +1,111 @@
+{
+  "id": "430524c5-6c61-42e0-a0c2-fec0e58b7662",
+  "version": "2.0",
+  "name": "Calculadora operações",
+  "url": "http://127.0.0.1",
+  "tests": [{
+    "id": "cb65b119-622a-4414-9190-1ac209274d0e",
+    "name": "Teste",
+    "commands": [{
+      "id": "155ee946-bb7b-428e-b8ae-beb73d7d1a0d",
+      "comment": "",
+      "command": "open",
+      "target": "/seleniumteste.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab6b699c-972d-4b2c-b84d-b50f9fcc0363",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1616x876",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aeca4c7e-949d-4f64-8d4c-3ee7cb849bdd",
+      "comment": "",
+      "command": "click",
+      "target": "id=vlr1",
+      "targets": [
+        ["id=vlr1", "id"],
+        ["css=#vlr1", "css:finder"],
+        ["xpath=//input[@id='vlr1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d6da478-cd38-4f8f-90df-6e5dd5464d74",
+      "comment": "",
+      "command": "type",
+      "target": "id=vlr1",
+      "targets": [
+        ["id=vlr1", "id"],
+        ["css=#vlr1", "css:finder"],
+        ["xpath=//input[@id='vlr1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "fc3955c6-4914-464f-b193-3d7d7de06f68",
+      "comment": "",
+      "command": "type",
+      "target": "id=vlr2",
+      "targets": [
+        ["id=vlr2", "id"],
+        ["css=#vlr2", "css:finder"],
+        ["xpath=//input[@id='vlr2']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "f10f229e-3004-4018-aa12-1b57803b6b85",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Calcula')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "076475f4-02a7-4809-ba7f-9c07436b52c1",
+      "comment": "",
+      "command": "assertText",
+      "target": "resultadoCorreto",
+      "targets": [],
+      "value": "12"
+    }, {
+      "id": "f708ac33-f5ff-4e7f-9ca4-cd462d2730c1",
+      "comment": "",
+      "command": "assertText",
+      "target": "calcularSubtracao",
+      "targets": [],
+      "value": "8"
+    }, {
+      "id": "85cd3238-98c1-4f9f-b87b-60c8409fa828",
+      "comment": "",
+      "command": "assertText",
+      "target": "calcularDivisao",
+      "targets": [],
+      "value": "5"
+    }, {
+      "id": "75a9bd6f-5ffe-4e77-80c6-c93ca4e2e3e5",
+      "comment": "",
+      "command": "assertText",
+      "target": "calcularMultiplicacao",
+      "targets": [],
+      "value": "20"
+    }]
+  }],
+  "suites": [{
+    "id": "8b77623e-913b-48af-af6a-839a133dc154",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cb65b119-622a-4414-9190-1ac209274d0e"]
+  }],
+  "urls": ["http://127.0.0.1/"],
+  "plugins": []
+}

@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class="row">
+            <div class="span6 offset1">
+                <h3>Calculadora</h3>
+                Valor1 inteiro<br></br>
+                <input type="text" id="vlr1"></input><br></br>
+                Valor2 inteiro<br></br>
+                <input type="text" id="vlr2"></input><br></br> 
+
+                  
+                Valor 1 Decimal<br></br>
+                <input type="text" id="vlr1d"></input><br></br> 
+                
+                Valor 2 Decimal<br></br>
+                <input type="text" id="vlr2d"></input><br></br> 
+
+
+                Valor 1 Negativo<br></br>
+                <input type="text" id="vlr1n"></input><br></br> 
+
+                Valor 2 Negativo<br></br>
+                <input type="text" id="vlr2n"></input><br></br> 
+
+
+                Valor 1 String<br></br>
+                <input type="text" id="vlr1s"></input><br></br> 
+
+
+                Valor 2 String<br></br>
+                <input type="text" id="vlr2s"></input><br></br>
+
+              
+                
+                Valor 1 OP 0<br></br>
+                <input type="text" id="vlr1OP"></input><br></br> 
+
+                
+                Valor 2 OP 0<br></br>
+                <input type="text" id="vlr2OP"></input><br></br> 
+
+
+
+                <button type="button" onclick="calcularErrado();calcularCorretamente();calcularDivisao(); calcularSubtracao(); calcularMultiplicacao();">Calcula</button><br></br>
+                Resultado errado:<br></br>
+                <span id="resultadoErrado"></span><br></br>
+                <b>Resultados corretos:</b><br></br>
+                <br>
+                Resultado Adicao:<br></br>
+                <span id="resultadoCorreto"></span><br></br>
+                Resultado divisao:<br></br>
+                <span id="calcularDivisao"></span><br></br>
+
+                Resultado Subtracao:<br></br>
+                <span id="calcularSubtracao"></span><br></br>
+
+                Resultado Multiplicacao:<br></br>
+                <span id="calcularMultiplicacao"></span><br></br>
+            </div>
+        </div>
+        <script>
+        var vlr1 = document.getElementById("vlr1")
+        var vlr2 = document.getElementById("vlr2")
+        var vlr1d = document.getElementById("vlr1d")
+        var vlr2d = document.getElementById("vlr2d")
+        var vlr1n = document.getElementById("vlr1n")
+        var vlr2n = document.getElementById("vlr2n")
+        var vlr1s = document.getElementById("vlr1s")
+        var vlr2s = document.getElementById("vlr2s")
+        var vlr1OP = document.getElementById("vlr1OP")
+        var vlr2OP = document.getElementById("vlr2OP")
+
+
+        function calcularErrado(){
+          var soma = vlr1.value + vlr2.value;          
+          document.getElementById('resultadoErrado').innerHTML = soma;
+        }
+
+        function calcularCorretamente(){
+          var string_sample = "";
+          var soma1 = parseFloat(vlr1.value) + parseFloat(vlr2.value);
+          var soma2 = parseFloat(vlr1d.value) + parseFloat(vlr2d.value);
+          var soma3 = parseFloat(vlr1n.value) + parseFloat(vlr2n.value);
+          var soma4 = vlr1s.value.charCodeAt(0) + vlr2s.value.charCodeAt(0);
+          var soma5 = parseFloat(vlr1OP.value) + parseFloat(vlr2OP.value);
+
+          document.getElementById('resultadoCorreto').innerHTML += "Inteiros: " + soma1 + "<br>";
+          document.getElementById('resultadoCorreto').innerHTML += "Decimais: " + soma2 + "<br>";
+          document.getElementById('resultadoCorreto').innerHTML += "Negativos: " + soma3 + "<br>";
+          document.getElementById('resultadoCorreto').innerHTML += "Strings: " + soma4 + "<br>";
+          document.getElementById('resultadoCorreto').innerHTML += "Operaca com zero: " + soma5 + "<br>";
+        }
+        function calcularDivisao(){
+          var string_sample2 = "";
+          var divisao1 = parseFloat(vlr1.value) / parseFloat(vlr2.value);
+          var divisao2 = parseFloat(vlr1d.value) / parseFloat(vlr2d.value);
+          var divisao3 = parseFloat(vlr1n.value) / parseFloat(vlr2n.value);
+          var divisao4 = vlr1s.value.charCodeAt(0) / vlr2s.value.charCodeAt(0);
+          var divisao5 = parseFloat(vlr1OP.value) / parseFloat(vlr2OP.value);
+          
+          document.getElementById('calcularDivisao').innerHTML += "Inteiros: " + divisao1 + "<br>";
+          document.getElementById('calcularDivisao').innerHTML += "Decimais: " + divisao2 + "<br>";
+          document.getElementById('calcularDivisao').innerHTML += "Negativos: " + divisao3 + "<br>";
+          document.getElementById('calcularDivisao').innerHTML += "Strings: " + divisao4 + "<br>";
+          document.getElementById('calcularDivisao').innerHTML += "Operaca com zero: " + divisao5 + "<br>";
+        }
+        function calcularSubtracao(){
+          var string_sample3 = "";
+          var subtracao1 = parseFloat(vlr1.value) - parseFloat(vlr2.value);
+          var subtracao2 = parseFloat(vlr1d.value) - parseFloat(vlr2d.value);
+          var subtracao3 = parseFloat(vlr1n.value) - parseFloat(vlr2n.value);
+          var subtracao4 = vlr1s.value.charCodeAt(0) - vlr2s.value.charCodeAt(0);
+          var subtracao5 = parseFloat(vlr1OP.value) - parseFloat(vlr2OP.value);
+
+
+          document.getElementById('calcularSubtracao').innerHTML += "Inteiros: " + subtracao1 + "<br>";
+          document.getElementById('calcularSubtracao').innerHTML += "Decimais: " + subtracao2 + "<br>";
+          document.getElementById('calcularSubtracao').innerHTML += "Negativos: " + subtracao3 + "<br>";
+          document.getElementById('calcularSubtracao').innerHTML += "Strings: " + subtracao4 + "<br>";
+          document.getElementById('calcularSubtracao').innerHTML += "Operaca com zero: " + subtracao5 + "<br>";
+
+        }
+        function calcularMultiplicacao(){
+          var string_sample4 = "";
+          var multiplicacao1 = parseFloat(vlr1.value) * parseFloat(vlr2.value);
+          var multiplicacao2 = parseFloat(vlr1d.value) * parseFloat(vlr2d.value);
+          var multiplicacao3 = parseFloat(vlr1n.value) * parseFloat(vlr2n.value);
+          var multiplicacao4 = vlr1s.value.charCodeAt(0) * vlr2s.value.charCodeAt(0);
+          var multiplicacao5 = parseFloat(vlr1OP.value) * parseFloat(vlr2OP.value);
+          
+          
+          document.getElementById('calcularMultiplicacao').innerHTML += "Inteiros: " + multiplicacao1 + "<br>";
+          document.getElementById('calcularMultiplicacao').innerHTML += "Decimais: " + multiplicacao2 + "<br>";
+          document.getElementById('calcularMultiplicacao').innerHTML += "Negativos: " + multiplicacao3 + "<br>";
+          document.getElementById('calcularMultiplicacao').innerHTML += "Strings: " + multiplicacao4 + "<br>";
+          document.getElementById('calcularMultiplicacao').innerHTML += "Operaca com zero: " + multiplicacao5 + "<br>";
+        }
+
+
+        </script>
+    </body>
+</html>
